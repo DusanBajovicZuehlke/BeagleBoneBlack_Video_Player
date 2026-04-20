@@ -1,0 +1,22 @@
+name: "Commit Message Check"
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  check-commit-format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Commit Message Format and Length
+        uses: gs0604/commit-message-checker@v2
+        with:
+          # Regex Explained:
+          # ^#\d+     -> Starts with # and at least one digit (the ID)
+          # ,         -> Followed exactly by a comma
+          # \s        -> Followed exactly by a space
+          # .{1,20}   -> Followed by 1 to 20 characters of message
+          # $         -> End of string
+          pattern: '^#\d+, \s*.{1,22}$'
+          error: 'Commit message format error! Expected format: "#ID, Your message" (Max 30 characters total).'
+          excludeDescription: 'true'
