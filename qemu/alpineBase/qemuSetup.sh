@@ -1,0 +1,11 @@
+qemu-system-arm -M virt\
+-cpu cortex-a15\
+-m 512\
+-kernel vmlinuz-virt\
+-initrd initramfs-virt\
+-drive file=alpine-virt-3.23.4-armv7.iso,id=cdrom,if=none,format=raw\
+-device virtio-blk-device,drive=cdrom\
+-drive file=mydisk.qcow2,if=none,id=hd0\
+-device virtio-blk-device,drive=hd0\
+-append "console=ttyAMA0"\
+-nographic 
