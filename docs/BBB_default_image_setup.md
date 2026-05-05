@@ -63,12 +63,13 @@ To boot BBB:
 
 ### 1.5 Verifying the Installation
 
-SSH connection was established over USB Gadget Ethernet:
-
 ```bash
 ssh debian@192.168.7.2
 ```
-
+### 1.6 Bootig without holding S2 button
+```
+sudo dd if=/dev/zero of=/dev/mmcblk1 bs=1M count=10
+```
 ---
 
 ## 2. Internet Connection Setup
@@ -135,23 +136,10 @@ sudo timedatectl set-timezone Europe/Belgrade
 
 ---
 
-## 4. Display Setup (HDMI)
+## 4. Display Setup 
 
-### 4.1 Resolution Configuration
 
-The default resolution was 1280x1024. It was reduced to 1024x768 by editing `/boot/uEnv.txt`:
-
-```bash
-sudo nano /boot/uEnv.txt
-```
-
-The active `cmdline` was replaced with the HDMI resolution override line:
-
-```
-cmdline=fsck.repair=yes earlycon coherent_pool=1M net.ifnames=0 lpj=1990656 rng_core.default_quality=100 video=HDMI-A-1:1024x768@60e
-```
-
-### 4.2 Desktop Environment
+### 4.1 Desktop Environment
 
 A lightweight XFCE4 desktop was installed:
 
@@ -214,8 +202,6 @@ chmod +x /home/debian/startup.sh
 File: `startup.sh`
 
 ```sh
-#!/bin/bash
-
 #!/bin/bash
 
 export DISPLAY=:0
