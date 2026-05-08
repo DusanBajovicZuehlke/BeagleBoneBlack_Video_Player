@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- SD card formatted and mounted (see [SD card formatting guide](docs/formating-sd-card.md)
+-SD card formatted and mounted (see [SD card formatting guide](docs/formatting-sd-card.md))
 - `beagle-source/` folder containing:
   - `boot-files.tar.gz`
   - `alpine-fs.tar.gz`
