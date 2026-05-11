@@ -4,10 +4,10 @@
 
 ## Prerequisites
 
--SD card formatted and mounted (see [SD card formatting guide](https://github.com/DusanBajovicZuehlke/BeagleBoneBlack_Video_Player/blob/formating-sd-card/docs/formating-sd-card.md))
+SD card formatted and mounted (see [SD card formatting guide](https://github.com/DusanBajovicZuehlke/BeagleBoneBlack_Video_Player/blob/formating-sd-card/docs/formating-sd-card.md))
 - `beagle-source/` folder containing:
-  - `boot-files.tar.gz`
-  - `alpine-fs.tar.gz`
+  - [boot-files.tar.gz](https://github.com/DusanBajovicZuehlke/BeagleBoneBlack_Video_Player/blob/beagle_alpine/beagle-sources/alpine-fs.tar.gz)
+  - [alpine-fs.tar.gz](https://github.com/DusanBajovicZuehlke/BeagleBoneBlack_Video_Player/blob/beagle_alpine/beagle-sources/boot-files.tar.gz)
 - Partitions mounted:
   - `/dev/sdb1` → `/mnt/bbb-boot`
   - `/dev/sdb2` → `/mnt/bbb-root`
