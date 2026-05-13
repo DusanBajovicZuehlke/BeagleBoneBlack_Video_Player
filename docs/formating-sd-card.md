@@ -70,15 +70,15 @@ Inside `fdisk`, enter the following commands in order:
 | 2 | `n` | New partition |
 | | `p` | Primary |
 | | `1` | Partition number |
-| | Enter | Default start sector |
-| | `+128M` | Boot partition size |
+| | 8192 | Default start sector |
+| | `+256M` | Boot partition size |
 | 3 | `t` | Change partition type |
 | | `c` | W95 FAT32 (LBA) |
 | 4 | `a` | Set boot flag on partition 1 |
 | 5 | `n` | New partition (root) |
 | | `p` | Primary |
 | | `2` | Partition number |
-| | Enter | Default start sector |
+| | 532480 | Default start sector |
 | | Enter | Use remaining disk space |
 | 6 | `w` | Write changes and exit |
 
