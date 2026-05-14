@@ -16,6 +16,12 @@ SD card formatted and mounted (see [SD card formatting guide](https://github.com
 
 ---
 
+## Optional: Automated Installation Script
+
+If you want to automate the extraction process or continue with additional setup steps after verifying that the required files exist, you can use the provided [Alpine installation script](https://github.com/DusanBajovicZuehlke/BeagleBoneBlack_Video_Player/blob/formating-sd-card/beagle-sources/write_alpine.sh) instead of running the commands manually.
+
+The script performs the same extraction and verification steps automatically and can be used as a faster alternative to the manual process described below.
+
 ## 1. Verify the Source Files Exist
 
 ```bash
